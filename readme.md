@@ -1,11 +1,3 @@
----
-editor_options:
-  markdown:
-    wrap: 72
-output:
-  html_document:
-    df_print: paged
----
 
 # Computer cluster info
 
@@ -19,7 +11,7 @@ available infrastructure.
 
 To get an access to a given server you need to apply for it to the
 cluster administrator:
-[tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl){.email}
+[tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl)
 Please specify for access to which machine you are applying (this has to
 be fixed with your supervisor in advance). After you will be granted
 access you will get an e-mail with login and password. Connection to the
@@ -36,13 +28,14 @@ To connect to the servers one needs to start a VPN connection using
 OpenVPN.
 
 If you have yet not tested whether your account is active and whether
-you can connect using OpenVPN - follow the istructions:\
+you can connect using OpenVPN - follow the istructions:
 1.	Please log on to  <https://orkan.bio.edu.pl/ipa/ui/> to change or
 verify your password. Tutorial -\>  [How to change password using web
-browser?](https://uj-campus.notion.site/5c6c78b2bd084e8abeb8664c6fcd99b4?v=4d96fc418e9e41088c2de2e5c74a7e52)\
+browser?](https://uj-campus.notion.site/5c6c78b2bd084e8abeb8664c6fcd99b4?v=4d96fc418e9e41088c2de2e5c74a7e52)
 2.	Start the OpenVPN connection according to the instructions. Tutorial
 -\>  [How to connect to the molecol cluster network using
-OpenVPN?](https://uj-campus.notion.site/2508eb0f22894133ac4047170750db40?v=b2d9ad84d27d4b4493d58ac03259bf78)\
+OpenVPN?](https://uj-campus.notion.site/2508eb0f22894133ac4047170750db40?v=b2d9ad84d27d4b4493d58ac03259bf78) and some extra explanations are here:
+![](VPN_additional_info.png)
 3.	You can already log in to the servers using their local IP addresses,
 remembering to keep the OpenVPN connection running.
 
@@ -144,10 +137,10 @@ to first establish connection giving you credentials (as with PuTTy).
 We have Google calendar
 [molecol_cluster](https://calendar.google.com/calendar/u/0?cid=aG1jZjQ4bHJjYXAzdmZwbzRxaGFrM2U3cGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 to schedule bigger jobs. To be added to it please contact one of:
-[krystyna.brzyska\@gmail.com](mailto:krystyna.brzyska@gmail.com){.email},
-[p.lukasik\@gmail.com](mailto:p.lukasik@gmail.com){.email},
-[zielinski.piotr1987\@gmail.com](mailto:zielinski.piotr1987@gmail.com){.email}
-or [w.babik76\@gmail.com](mailto:w.babik76@gmail.com){.email}.
+[krystyna.brzyska\@gmail.com](mailto:krystyna.brzyska@gmail.com),
+[p.lukasik\@gmail.com](mailto:p.lukasik@gmail.com),
+[zielinski.piotr1987\@gmail.com](mailto:zielinski.piotr1987@gmail.com)
+or [w.babik76\@gmail.com](mailto:w.babik76@gmail.com).
 
 Please, put the info about your jobs (big - more than 10 cores or 50 G
 RAM, lasting more than an hour) in the calendar, so other people can
@@ -175,7 +168,7 @@ substantial part of the infrastructure for a longer time. To be added
 ask somebody from the above list.
 
 -   For direct communication with the administrator use his e-mail:
-    [tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl){.email}
+    [tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl)
 
 # Maintenance
 
