@@ -9,50 +9,50 @@ available infrastructure.
 
 # **Getting access**
 
-To get an access to a given server you need to apply for it to the
-cluster administrator:
-[tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl)
-Please specify for access to which machine you are applying (this has to
-be fixed with your supervisor in advance). After you will be granted
-access you will get an e-mail with login and password. Connection to the
+To get an access to a given server you need to ask your PI who will contact 
+cluster administrator
+[helpdesk\@bio.edu.pl](mailto:helpdesk@bio.edu.pl) and ask for creating a user account for you.
+Once the account is created you will get an e-mail with login and password. Connection to the
 servers is only possible via VPN (Virtual Private Network). Below you
-will find information how to establish such connection. When you
-sucesfully connect and log in to the server, please change your default
-password (see below). If you will type your password wrongly 3 times your account
-will be blocked and you wont be able to log in. In this situation please
-contact the administrator.
+will find information how to establish such connection. 
+
+# Setting your password for the first time
+
+Once you receive an email with your username (usually name.surname) and One Time Password, go to  <https://orkan.bio.edu.pl/ipa/ui/>, login with your username and One Time Password. You'll be asked to set a new password - this password would work on all the servers you have an access to. There's a tutorial -\>  [How to change password using web
+browser?](https://uj-campus.notion.site/5c6c78b2bd084e8abeb8664c6fcd99b4?v=4d96fc418e9e41088c2de2e5c74a7e52)
+
+**Important** You have to set your pasword only once and it's the only thing you can do without setting up a VPN connection (see below).
+
 
 # Connection via VPN
 
 To connect to the servers one needs to start a VPN connection using
 OpenVPN.
 
-If you have yet not tested whether your account is active and whether
-you can connect using OpenVPN - follow the istructions:
-1.	Please log on to  <https://orkan.bio.edu.pl/ipa/ui/> to change or
-verify your password. Tutorial -\>  [How to change password using web
-browser?](https://uj-campus.notion.site/5c6c78b2bd084e8abeb8664c6fcd99b4?v=4d96fc418e9e41088c2de2e5c74a7e52)
-2.	Start the OpenVPN connection according to the instructions. Tutorial
+
+1.	Start the OpenVPN connection according to the instructions in Tutorial
 -\>  [How to connect to the molecol cluster network using
 OpenVPN?](https://uj-campus.notion.site/2508eb0f22894133ac4047170750db40?v=b2d9ad84d27d4b4493d58ac03259bf78) and some extra explanations are here:
 ![](VPN_additional_info.png)
-3.	You can already log in to the servers using their local IP addresses,
+2.	You can now log in to the servers using their local IP addresses (see below),
 remembering to keep the OpenVPN connection running.
 
 # Infrastructure
 
 **Servers**
 
-There are 3 servers available at the moment. You will get an access to
+There are 4 servers available at the moment. You will get an access to
 one of them (or more if needed). Table below contains important info
 like IP addressees that you will need to connect to them.
 
-| Common name | IP address     | Port | Access service | HD   | RAM   | CPU | GPU      |
-|-------------|----------------|------|----------------|------|-------|-----|----------|
-| BUG         | 192.168.130.18 | 22   | ssh            | 68 T | 500 G | 149 | \-       |
-| IPS         | 192.168.130.17 | 22   | ssh            | 96 T | 500 G | 96  | \-       |
-| AZOR        | 192.168.130.16 | 22   | ssh            | 20 T | 250 G | 72  | Tesla T4 |
-| FSM         | 192.168.130.11 | 22   | ssh            | 10 T | 500 G | 80  | \-       |
+| Common name | Hostname         |  IP address    | Port | Access   | HD   | RAM   | CPU | GPU      |
+|-------------|----------------- |----------------|------|----------|------|-------|-----|----------|
+| SEQ         | seq.gorce.local  | 192.168.130.19 | 22   | ssh      | 50 T | 500 G | 128 | \-       |
+| BUG         | bug.gorce.local  | 192.168.130.18 | 22   | ssh      | 68 T | 650 G | 192 | \-       |
+| IPS         | ips.gorce.local  | 192.168.130.17 | 22   | ssh      | 96 T | 500 G | 96  | \-       |
+| AZOR        | azor.gorce.local | 192.168.130.16 | 22   | ssh      | 20 T | 250 G | 72  | Tesla T4 |
+
+**Important** To be able to connect to the servers, using either Hostname or IP address, you must by connected to VPN first - otherwise you'll get the message `host does not exist`.
 
 **Storage**
 
@@ -61,13 +61,12 @@ storage. To store the data that you are not currently using all servers
 have access to the shared disk storage.
 
 -   matrix (short term storage) has fast connection to machines - can be
-    found in `/mnt/matrix` - this has 20TB.
+    found in `/mnt/unitymatrix` - this has 80TB.
 
 -   qnap (long term storage) has slower connection to machines but
     provides more space - can be found in `/mnt/qnap` - this has 110TB.
 
-If you are not using some of your files please transfer them there -
-space is still available. Please, remember about compressing your files
+If you are not using some of your files please transfer them there. Please, remember about compressing your files
 while storing. Example commands for compression of all files in a
 directory **`tar -cvzf name_of_output_file.tar.gz directory_name`** and
 for decompression **`tar -xzvf file_to_decompress.tar.gz`**
@@ -78,9 +77,9 @@ for decompression **`tar -xzvf file_to_decompress.tar.gz`**
 
 *Windows*
 
-To get connected to servers from the Windows machine Download
-[PuTTy](https://www.putty.org/). When you run PuTTy for the first time
-you need to configure new connection thus:
+You can connect to servers using [PuTTy](https://www.putty.org/) or (recommended) [MobaXterm](https://mobaxterm.mobatek.net/). Below is the instruction for PuTTy.
+
+When you run PuTTy for the first time you need to configure new connection thus:
 
 1.  Go to `Translation`, and select Remote character set: **UTF-8**.
 
@@ -134,13 +133,9 @@ to first establish connection giving you credentials (as with PuTTy).
 
 -   Calendar
 
-We have Google calendar
+We have Google calendar 
 [molecol_cluster](https://calendar.google.com/calendar/u/0?cid=aG1jZjQ4bHJjYXAzdmZwbzRxaGFrM2U3cGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-to schedule bigger jobs. To be added to it please contact one of:
-[krystyna.brzyska\@gmail.com](mailto:krystyna.brzyska@gmail.com),
-[p.lukasik\@gmail.com](mailto:p.lukasik@gmail.com),
-[zielinski.piotr1987\@gmail.com](mailto:zielinski.piotr1987@gmail.com)
-or [w.babik76\@gmail.com](mailto:w.babik76@gmail.com).
+to schedule bigger jobs. You will be added automatically to this calendar when your account is created.
 
 Please, put the info about your jobs (big - more than 10 cores or 50 G
 RAM, lasting more than an hour) in the calendar, so other people can
@@ -152,32 +147,18 @@ and finish jobs on schedule. Otherwise, other people can't plan their
 work efficiently. If you don't follow the rules, your access to
 computing power might be restricted.
 
--   MS Teams
-
-To communicate with administrator and other users you might also use Ms
-Teams channel
-[WB-IT](https://teams.microsoft.com/l/team/19%3atBv3ZlmLBDMl55G4y3IASAMyL2vpF5VRBOAhb_seY9Y1%40thread.tacv2/conversations?groupId=369d073a-a278-4a7f-ad2b-aa11dea62e0c&tenantId=eb0e26eb-bfbe-47d2-9e90-ebd2426dbceb)
-One might ask cluster administrator or somebody from the above list to
-be added to the channel.
-
 -   Google mailing list
 
-There is also mailing list molecol_cluster\@googlegroups.com which helps
+There is also mailing list [molecol_cluster\@googlegroups.com](mailto:molecol_cluster@googlegroups.com) which helps
 the users to communicate for example if there is a need to book
-substantial part of the infrastructure for a longer time. To be added
-ask somebody from the above list.
+substantial part of the infrastructure for a longer time. You will be added automatically to this calendar when your account is created.
 
 -   For direct communication with the administrator use his e-mail:
-    [tomasz.ciaston\@uj.edu.pl](mailto:tomasz.ciaston@uj.edu.pl)
+    [helpdesk\@bio.edu.pl](mailto:helpdesk@bio.edu.pl)
 
 # Maintenance
 
-Monday mornings are default service hours (7-10 am) - this is the time
-when NO jobs should be running. If you have long lasting job which has
-to run at that time, you should contact administrator in advance and ask
-him to cancel the restart of a particular machine, if not your job might
-be killed. Please do not abuse this possibility because it might affect
-safety of our machines.
+We're trying to keep our servers up most of the times. Sometimes, however, restarts are needed for maintenance, updates, etc. Such restarts will be announced via email to [molecol_cluster\@googlegroups.com](mailto:molecol_cluster@googlegroups.com)
 
 # Useful tools
 
