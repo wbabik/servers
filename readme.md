@@ -113,6 +113,17 @@ you can start working on the remote server in the text terminal mode!
     IP address, user name and password.
 3.  Click on the newly added server to connect to it.
 
+
+**RStudio server**
+
+is installed on SEQ server, you can access it from from your internet browser if you have an account on SEQ and your're connecten to VPN. The address is  http://192.168.130.19:8787/
+or, equivalently,
+http://seq.gorce.local:8787/
+you'l be asked to login using your user and password
+
+
+
+
 **File transfer**
 
 Files from your local computer to servers can be transferred using:
