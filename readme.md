@@ -60,11 +60,11 @@ Servers are supposed to be our computing resources, NOT a long term
 storage. To store the data that you are not currently using all servers
 have access to the shared disk storage.
 
--   matrix (short term storage) has fast connection to machines - can be
-    found in `/mnt/unitymatrix` - this has 80TB.
+-   matrix (short term storage) has fast connection to machines -  `/mnt/unitymatrix` - this has 80TB.
 
--   qnap (long term storage) has slower connection to machines but
-    provides more space - can be found in `/mnt/qnap` - this has 110TB.
+-   qnap (long term storage) has slower connection to machines but provides more space -  `/mnt/qnap` - this has 110TB.
+
+-   storage (long term storage) is an extension of qnap, so the same properties - `/mnt/storage` - this has 360 TB.
 
 If you are not using some of your files please transfer them there. Please, remember about compressing your files
 while storing. Example commands for compression of all files in a
