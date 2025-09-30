@@ -47,6 +47,7 @@ like IP addressees that you will need to connect to them.
 
 | Common name | Hostname         |  IP address    | Port | Access   | HD   | RAM   | CPU | GPU      |
 |-------------|----------------- |----------------|------|----------|------|-------|-----|----------|
+| GEN         | gen.gorce.local  | 192.168.130.20 | 22   | ssh      | 100 T| 700 G | 170 | 2 Nv L4  |
 | SEQ         | seq.gorce.local  | 192.168.130.19 | 22   | ssh      | 50 T | 500 G | 128 | \-       |
 | BUG         | bug.gorce.local  | 192.168.130.18 | 22   | ssh      | 68 T | 650 G | 192 | \-       |
 | IPS         | ips.gorce.local  | 192.168.130.17 | 22   | ssh      | 96 T | 500 G | 96  | \-       |
@@ -62,9 +63,11 @@ have access to the shared disk storage.
 
 -   matrix (short term storage) has fast connection to machines -  `/mnt/unitymatrix` - this has 80TB.
 
--   qnap (long term storage) has slower connection to machines but provides more space -  `/mnt/qnap` - this has 110TB.
+-   storage (long term storage) has slower connection to machines but provides more space - `/mnt/storage` - this has 360 TB.
 
--   storage (long term storage) is an extension of qnap, so the same properties - `/mnt/storage` - this has 360 TB.
+-   qnap (long term storage) has slower connection to machines but provides more space -  `/mnt/qnap` - this has 110TB and is used mostly for backups; don't use it as a primary storage.
+
+
 
 If you are not using some of your files please transfer them there. Please, remember about compressing your files
 while storing. Example commands for compression of all files in a
@@ -116,10 +119,10 @@ you can start working on the remote server in the text terminal mode!
 
 **RStudio server**
 
-is installed on SEQ server, you can access it from from your internet browser if you have an account on SEQ and your're connecten to VPN. The address is  http://192.168.130.19:8787/
-or, equivalently,
-http://seq.gorce.local:8787/
-you'l be asked to login using your user and password
+is installed on GEN and SEQ servers, you can access it from from your internet browser if you have an account on GEN or SEQ and your're connecten to VPN. 
+The address on GEN is http://192.168.130.20:8787/ (or, equivalently, http://gen.gorce.local:8787/)
+The address on SEQ is http://192.168.130.19:8787/ (or, equivalently, http://seq.gorce.local:8787/)
+you'll be asked to login using your user and password
 
 
 
