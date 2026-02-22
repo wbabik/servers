@@ -145,7 +145,7 @@ to first establish connection giving you credentials (as with PuTTy).
 
 # Backups
 
-Information how to backup your data is [here](myLib/README.md).
+Information how to backup your data is [here](user_backup.md).
 
 # Communication
 
