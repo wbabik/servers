@@ -143,6 +143,10 @@ Unless you often transfer large number of files, there are not real
 differences between them except of the user interface. In each you have
 to first establish connection giving you credentials (as with PuTTy).
 
+# Backups
+
+Information how to backup your data is here (myLib/README.md).
+
 # Communication
 
 -   Calendar
