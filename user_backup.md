@@ -15,7 +15,7 @@ You use it via the command: **`user_backup.sh`**.
 
 **By default each user get 1 TB of backup space. It's assumed that even if you keep large datasets in your home for convenience, these data sit also on `/mnt/unitymatrix/` or `/mnt/backups` and will be caked up by the mechanism signalled above.**
 
-# 
+---
 
 How the backup works:
 - your backup is stored under **`/mnt/backups/<your_login>/<server_name>/data/...`**
